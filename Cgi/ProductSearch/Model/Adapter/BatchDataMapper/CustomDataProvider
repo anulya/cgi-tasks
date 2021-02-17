@@ -1,8 +1,21 @@
 <?php
+
 /**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
+ * PHP version 7.3.7
+
+ * @category    Module
+ * @package     Cgi
+ * @author      Anulya <anulya.reddy@gmail.com>
+ * @copyright   2021 © Cgi, All rights reserved.
+ * @namespace   Cgi
+ * @module      ProductSearch
+ * @brief       ProductSearch Model
+ * @date        02/17/21
+ * @description ProductSearch Model
+ * @license     http://www.cgi.com/ CGI
+ * @link        \Cgi\ProductSearch\Model\Adapter\BatchDataMapper\CustomDataProvider
  */
+
 declare(strict_types=1);
 
 namespace Cgi\ProductSearch\Model\Adapter\BatchDataMapper;

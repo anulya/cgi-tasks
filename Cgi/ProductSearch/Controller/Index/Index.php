@@ -1,5 +1,21 @@
 <?php
 
+/**
+ * PHP version 7.3.7
+
+ * @category    Module
+ * @package     Cgi
+ * @author      Anulya <anulya.reddy@gmail.com>
+ * @copyright   2021 © Cgi, All rights reserved.
+ * @namespace   Cgi
+ * @module      ProductSearch
+ * @brief       ProductSearch Controller
+ * @date        02/17/21
+ * @description ProductSearch Controller
+ * @license     http://www.cgi.com/ CGI
+ * @link        \Cgi\ProductSearch\Controller\Index\Index
+ */
+
 namespace Cgi\ProductSearch\Controller\Index;
 
 /**
@@ -9,9 +25,9 @@ namespace Cgi\ProductSearch\Controller\Index;
 class Index extends \Magento\Framework\App\Action\Action
 {
     /**
-     * @var $_resultPageFactory
+     * @var $resultPageFactory
      */
-    protected $_resultPageFactory;
+    protected $resultPageFactory;
 
 
     /**
@@ -21,14 +37,13 @@ class Index extends \Magento\Framework\App\Action\Action
      */
     public function __construct(\Magento\Framework\App\Action\Context $context, \Magento\Framework\View\Result\PageFactory $resultPageFactory)
     {
-        $this->_resultPageFactory = $resultPageFactory;
+        $this->resultPageFactory = $resultPageFactory;
         parent::__construct($context);
     }
 
     public function execute()
     {
-        $resultPage = $this->_resultPageFactory->create();
-        return $resultPage;
+        return $this->resultPageFactory->create();
     }
 }
 

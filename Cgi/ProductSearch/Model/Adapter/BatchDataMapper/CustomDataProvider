@@ -1,0 +1,31 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+declare(strict_types=1);
+
+namespace Cgi\ProductSearch\Model\Adapter\BatchDataMapper;
+
+use Magento\AdvancedSearch\Model\Adapter\DataMapper\AdditionalFieldsProviderInterface;
+
+/**
+ * Provide data mapping for custom fields
+ */
+class CustomDataProvider implements AdditionalFieldsProviderInterface
+{
+
+    /**
+     * @inheritdoc
+     */
+    public function getFields(array $productIds, $storeId)
+    {
+        $fields = [];
+        foreach ($productIds as $productId) {
+            $data = "";
+            $fields[$productId] = ["isbn_number" => $data];
+        }
+        return $fields;
+    }
+
+}
